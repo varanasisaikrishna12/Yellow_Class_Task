@@ -41,9 +41,7 @@ class _HomePageState extends State<HomePage> {
       videos.add(Video.fromJson(v)
         ..totalViews = 5000);
     });
-    for (int i = 0; i < videos.length; i++) {
-      a.add(GlobalKey());
-    }
+   
     setState(() {});
   }
 
@@ -129,6 +127,7 @@ class _HomePageState extends State<HomePage> {
         itemCount: videos.length,
         itemBuilder: (context, index) {
           Video video = videos[index];
+          a.add(GlobalKey());
           return VideoTile(
             video,
             key: a[index],
